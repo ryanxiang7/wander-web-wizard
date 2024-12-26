@@ -1,19 +1,27 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
 .app {
     position: relative;
     width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 .map {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-color: lightblue;
+    background-color: rgb(251, 238, 201);
 }
-
+.map-title{
+    font-size: 40px;
+    text-align: center;
+}
 .node {
-    background-color: blue;
+        background-color: rgb(222, 149, 74);
         color: white;
         text-align: center;
         border-radius: 15%;
@@ -24,13 +32,12 @@
         padding: 10px;
         box-sizing: border-box;
         word-break: break-word;
-        z-index: 2;
         width: 80px;
         height: 40px;
 }
 
 .node.current {
-    background-color: red;
+    background-color: rgb(189, 40, 29);
 }
 
 .node-container {
@@ -38,6 +45,7 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
+    z-index: 4;
 }
 
 .node:hover .profile {
@@ -47,7 +55,7 @@
 
 .line {
     height: 2px;
-    background-color: black;
+    background-color: rgb(230, 152, 54);
     z-index: 0;
 }
 
@@ -72,20 +80,21 @@
 }
 
 .profile {
+    font-family:'仿宋','KaiTi','Microsoft YaHei';
     margin-bottom: 10px;
     color: black;
-    background-color: white;
+    /* background-color: white; */
     padding: 5px;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
     text-align: center;
     word-break: break-word;
     max-width: 250px;
+    font-size: 14px;
 }
-.popup button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+.next-position{
+    /* todo 按钮样式？ */
+    margin-left: 30px;
 }
 .close-icon {
     position: absolute;
@@ -136,7 +145,7 @@
     font-size: 24px;
     color: #000;
     cursor: pointer;
-    z-index: 10;
+    z-index: 5;
 }
 
 .left-arrow {
