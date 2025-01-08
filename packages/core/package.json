@@ -1,0 +1,27 @@
+{
+  "name": "@wander-web-wizard/core",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/wander-web-wizard.umd.cjs",
+  "module": "./dist/wander-web-wizard.js",
+  "exports": {
+    ".": {
+      "import": "./dist/wander-web-wizard.js",
+      "require": "./dist/wander-web-wizard.umd.cjs"
+    },
+    "./style.css": "./dist/wander-web-wizard.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.5.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
